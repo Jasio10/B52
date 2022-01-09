@@ -11,9 +11,7 @@ ap.add_argument("-l", "--url", required=True,
 args, unknown = ap.parse_known_args()
 ref_args =vars(args)
 
-size = len(unknown)
-if size > 0:
-	print("\nList of ignored parameters : ",  unknown)
+
 
 print("\nTrying to reach : ", ref_args['url'])
 response = requests.get(ref_args['url'])
@@ -23,3 +21,6 @@ if resp_code != 200:
 	print("Web page can not be reach, check your URL address.  ",response )
 else:print("\nFrom a server ",response)
 
+size = len(unknown)
+if size > 0:
+	print("\nList of ignored parameters : ",  unknown)
