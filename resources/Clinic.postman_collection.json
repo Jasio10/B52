@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "5b8bcf09-d3d3-43cc-86c5-bdb0eee3ffdb",
+		"name": "Clinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Add new client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":{\r\n    \"firstName\":\"baba\",\r\n    \"lastName\":\"jaga\",\r\n    \"fullName\":\"baba jaga\"\r\n},\r\n\"address\":{\r\n    \"street\":\"3812 Parsons rd\",\r\n    \"city\":\"Cary\",\r\n    \"zip\":60000,\r\n    \"state\":\"IL\"\r\n},\r\n\"phone\":\"847 855 2555\",\r\n\"customerID\":12345,\r\n\"pets\":[\r\n    {\"name\":\"Smyk\",\r\n    \"petID\":123,\r\n    \"animalType\":\"dog\",\r\n    \"age\":5,\r\n    \"weight\":55,\r\n    \"appointment\":{\r\n        \"customerID\":12345,\r\n        \"petID\":123,\r\n        \"date\":\"2022-01-19\"\r\n        },\r\n    {\"name\":\"Smyk2\",\r\n    \"petID\":124,\r\n    \"animalType\":\"cat\",\r\n    \"age\":5,\r\n    \"weight\":15,\r\n    \"appointment\":{\r\n        \"customerID\":12345,\r\n        \"petID\":124,\r\n        \"date\":\"2022-01-19\"\r\n        }\r\n\r\n        }\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://animalClinic/addCustomer",
+					"protocol": "http",
+					"host": [
+						"animalClinic"
+					],
+					"path": [
+						"addCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"appointment\":{\r\n    \"customerID\":12345,\r\n    \"petID\":123,\r\n    \"date\":\"2022-01-19\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://animalClinic/addCustomer",
+					"protocol": "http",
+					"host": [
+						"animalClinic"
+					],
+					"path": [
+						"addCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel appointment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"appointment\":{\r\n    \"customerID\":12345,\r\n    \"petID\":123,\r\n    \"date\":\"2022-01-19\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://animalClinic/addCustomer",
+					"protocol": "http",
+					"host": [
+						"animalClinic"
+					],
+					"path": [
+						"addCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reschedule appointment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"appointment\":{\r\n    \"customerID\":12345,\r\n    \"petID\":123,\r\n    \"date\":\"2022-01-19\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://animalClinic/addCustomer",
+					"protocol": "http",
+					"host": [
+						"animalClinic"
+					],
+					"path": [
+						"addCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Customer By Full Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://animalClinic/searchCustomerByFullName?fullName=baba jaga",
+					"protocol": "http",
+					"host": [
+						"animalClinic"
+					],
+					"path": [
+						"searchCustomerByFullName"
+					],
+					"query": [
+						{
+							"key": "fullName",
+							"value": "baba jaga"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search customer by phone number",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://animalClinic/addApointment",
+					"protocol": "http",
+					"host": [
+						"animalClinic"
+					],
+					"path": [
+						"addApointment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
