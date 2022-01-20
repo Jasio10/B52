@@ -29,10 +29,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://animalClinic/addCustomer",
+					"raw": "http://www.animalClinic.com/addCustomer",
 					"protocol": "http",
 					"host": [
-						"animalClinic"
+						"www",
+						"animalClinic",
+						"com"
 					],
 					"path": [
 						"addCustomer"
@@ -56,13 +58,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://animalClinic/addCustomer",
+					"raw": "http://www.animalClinic.com/addNewAppointment",
 					"protocol": "http",
 					"host": [
-						"animalClinic"
+						"www",
+						"animalClinic",
+						"com"
 					],
 					"path": [
-						"addCustomer"
+						"addNewAppointment"
 					]
 				}
 			},
@@ -83,13 +87,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://animalClinic/addCustomer",
+					"raw": "http://www.animalClinic.com/cancelApointment",
 					"protocol": "http",
 					"host": [
-						"animalClinic"
+						"www",
+						"animalClinic",
+						"com"
 					],
 					"path": [
-						"addCustomer"
+						"cancelApointment"
 					]
 				}
 			},
@@ -98,7 +104,7 @@
 		{
 			"name": "Reschedule appointment",
 			"request": {
-				"method": "DELETE",
+				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -110,13 +116,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://animalClinic/addCustomer",
+					"raw": "http://www.animalClinic.com/rescheduleAppointment",
 					"protocol": "http",
 					"host": [
-						"animalClinic"
+						"www",
+						"animalClinic",
+						"com"
 					],
 					"path": [
-						"addCustomer"
+						"rescheduleAppointment"
 					]
 				}
 			},
@@ -128,10 +136,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://animalClinic/searchCustomerByFullName?fullName=baba jaga",
+					"raw": "http://www.animalClinic.com/searchCustomerByFullName?fullName=baba jaga",
 					"protocol": "http",
 					"host": [
-						"animalClinic"
+						"www",
+						"animalClinic",
+						"com"
 					],
 					"path": [
 						"searchCustomerByFullName"
@@ -149,16 +159,24 @@
 		{
 			"name": "Search customer by phone number",
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://animalClinic/addApointment",
+					"raw": "http://www.animalClinic.com/searchByPhoneNumber?phoneNumber=8478552222",
 					"protocol": "http",
 					"host": [
-						"animalClinic"
+						"www",
+						"animalClinic",
+						"com"
 					],
 					"path": [
-						"addApointment"
+						"searchByPhoneNumber"
+					],
+					"query": [
+						{
+							"key": "phoneNumber",
+							"value": "8478552222"
+						}
 					]
 				}
 			},
