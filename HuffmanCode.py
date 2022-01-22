@@ -25,9 +25,6 @@ def Encoding(the_data):
     for x, y in symbolWithProbs.items():
         stringEncoded += (str(x))
         stringEncoded += (str(y))
-        print("Character:", str(x)," Occurrence:", str(y))
-
-    print()
     print("Coded string : ", stringEncoded)
     return stringEncoded
 
